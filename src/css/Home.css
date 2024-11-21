@@ -1,0 +1,110 @@
+
+body{
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 100px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.parte2{
+    margin-top: 100px;
+}
+
+#lista{
+    margin: 0px;
+    padding-top: 27px;
+    max-width: 100%;
+}
+
+#titulos{
+    font-size: 25px;
+    font-weight: 400;
+    border-bottom: 1px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+}
+
+.links{
+    margin: 20px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    font-size: 10px;  
+}
+
+#conteudo{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+img{
+    width: 300px;
+    height: 175px;
+    cursor: pointer;
+}
+
+.botaodoGoogle{
+    cursor: pointer;
+    color: black;
+}
+
+p{
+    color:#FFB854;
+}
+
+h2{
+    cursor: pointer;
+}
+
+#botao-completo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 49.5px;
+    margin-right: 23px;
+    margin-left: 44px;
+
+}
+
+
+.botao-com-seta{
+    width: 63px;
+    height: 60px;
+    background-color: transparent;
+    color: #f4a64e;
+    cursor: pointer;
+    border: 1px solid #f4a64e;
+    border-radius: 30px;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+.botao-com-seta:hover {
+    background-color: #f4a64e;
+    color: #fff;
+    >.icone-flecha{
+        background-color: #f4a64e;
+        color: #fff;
+    }
+  }
+
+
+#ver-tudo{
+    font-size: 12px;
+    text-align: center;
+    color: #FFB854;
+}
+
+
+  
