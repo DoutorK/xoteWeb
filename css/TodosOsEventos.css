@@ -1,0 +1,82 @@
+/* Contêiner principal para a grade */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Itens maiores com largura mínima de 250px */
+    gap: 15px; /* Menor espaçamento entre os itens */
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 1600px; /* Grade mais larga */
+  }
+
+  .lista {
+    flex: 1 1 calc(16.66% - 40px); /* Aproximadamente 6 itens por linha em Full HD */
+    max-width: 300px;
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  
+
+
+  /* Cada item da grade */
+  .event-item {
+    text-align: center;
+    padding: 25px; /* Mais preenchimento interno */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Imagens maiores */
+  .event-item img {
+    width: 100%;
+    height: 200px; /* Aumenta a altura das imagens */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  #titulos{
+    display: flex;
+  }
+
+  /* Títulos */
+  .event-item h2 {
+    font-size: 1.3rem; /* Título um pouco maior */
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Links para Google Maps */
+  .botaodoGoogle {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px; /* Botão maior */
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botaodoGoogle:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .event-item img {
+      height: 150px; /* Imagens menores em telas pequenas */
+    }
+  }
+  

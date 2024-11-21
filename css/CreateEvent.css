@@ -1,0 +1,203 @@
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 5vh;
+  justify-content: center;
+}
+
+.event-container {
+  padding: 2rem;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  max-width: 90%; /* Removi o width: 100% aqui */
+}
+
+.breadcrumb {
+  padding: 0.625rem 2.8125rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.breadcrumb:hover {
+  color: #f4a64e;
+}
+
+.event-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.event-input {
+  padding: 0.625rem;
+  margin: 0.3125rem 0;
+  border: 1px solid #ccc9c9;
+  border-radius: 0.3125rem;
+  max-width: 29rem; /* Limite máximo de largura */
+}
+
+.event-input-mini {
+  max-width: 7.5rem;
+  padding: 0.625rem;
+  margin: 0.3125rem 0;
+  border: 1px solid #ccc9c9;
+  border-radius: 0.3125rem;
+}
+
+.content-pay {
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.checkbox-pay {
+  padding: 0.625rem;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc9c9;
+  border-radius: 0.3125rem;
+}
+
+.event-textarea {
+  width: 100%;
+  max-width: 29.125rem;
+  height: 9.875rem;
+  padding: 0.625rem;
+  border: 1px solid #ccc9c9;
+  border-radius: 0.3125rem;
+}
+
+.div-hora {
+  margin-inline-start: auto;
+}
+
+.div-pay1 {
+  margin-right: 0.625rem;
+}
+
+.content-labels {
+  max-width: 30.375rem;
+}
+
+.div-label-pay {
+  margin-right: 0.3125rem;
+}
+
+.image-preview {
+  width: 100%;
+  height: 18.75rem;
+  object-fit: cover;
+  margin-top: 0.625rem;
+  border: 1px solid #000;
+}
+
+.div-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.event-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #f4a64e;
+  border-radius: 0.3125rem;
+  background-color: transparent;
+  color: #f4a64e;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.event-button:hover {
+  background-color: #f4a64e;
+  color: #fff;
+}
+
+.error-message {
+  padding: auto;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.625rem; /* Aumentei o espaçamento entre as labels */
+}
+
+/* Media Queries para responsividade */
+
+@media (max-width: 1200px) {
+  .event-row {
+      flex-direction: column;
+      align-items: center; /* Centraliza os itens */
+  }
+
+  .event-input, .event-textarea {
+      width: 100%;
+      max-width: 100%; /* Faz com que os inputs e textarea ocupem toda a largura */
+  }
+
+  .image-preview {
+      height: auto; /* Ajusta a altura da imagem */
+  }
+
+  .content-pay {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-input, .event-textarea {
+      max-width: 90%;
+  }
+
+  .event-row {
+      flex-direction: column;
+      align-items: center; /* Centraliza os itens */
+  }
+
+  .content-pay {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .event-button {
+      width: 100%;
+      margin-top: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-input, .event-textarea {
+      max-width: 100%; /* Ocupa toda a largura disponível */
+  }
+
+  .event-button {
+      width: 100%;
+  }
+
+  .breadcrumb {
+      padding: 0.625rem;
+      font-size: 0.875rem;
+  }
+
+  .event-row {
+      flex-direction: column;
+      align-items: center; /* Centraliza os itens */
+  }
+}

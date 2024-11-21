@@ -1,0 +1,122 @@
+/* Container principal da navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  max-width: 100%;
+}
+
+/* Estilo do logo */
+.logo-xote {
+  color: #000000;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.logo-eventos {
+  color: #f4a64e;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* Caixa de pesquisa */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+  max-width: 300px;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search-icon {
+  color: #f4a64e;
+  margin-right: 8px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+/* Estilo da localização */
+.location-content {
+  display: flex;
+  align-items: center;
+  color: #f4a64e;
+}
+
+.location {
+  font-weight: 100;
+  font-size: 30px;
+}
+
+.location-icon, .chevron-down {
+  margin: 0 5px;
+}
+
+/* Botão de criar evento */
+.create-event-button {
+  padding: 8px 16px;
+  border: 1px solid #f4a64e;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #f4a64e;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.create-event-button:hover {
+  background-color: #f4a64e;
+  color: #fff;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;  /* Coloca os itens em coluna */
+    align-items: center;     /* Centraliza os itens */
+    padding: 10px 0;
+    border-bottom: none;
+  }
+
+  .logo-xote, .logo-eventos {
+    font-size: 24px; /* Reduz o tamanho do logo em telas menores */
+    margin-bottom: 10px;
+  }
+
+  .search-box {
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
+
+  .location-content {
+    margin-bottom: 10px;
+  }
+
+  .create-event-button {
+    margin-top: 10px; /* Dá um espaço entre o botão e os itens acima */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-xote, .logo-eventos {
+    font-size: 20px; /* Ajusta o tamanho do logo ainda mais em telas muito pequenas */
+  }
+
+  .search-box {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .location {
+    font-size: 20px; /* Ajuste no tamanho da localização */
+  }
+}

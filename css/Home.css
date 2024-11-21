@@ -1,0 +1,181 @@
+/* Configurações gerais */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 5vh;
+}
+
+h2 {
+    font-size: 1.25rem; /* Tamanho responsivo */
+}
+
+.parte2 {
+    margin-top: 5vh;
+}
+
+
+#titulos {
+    font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 1px solid;
+    margin: 5vh 1.5rem 0; /* 5vh de margem superior, 1.5rem à esquerda e à direita */
+    padding-bottom: 0.5rem;
+    width: auto; /* Ajuste automático para a largura */
+    text-align: center; /* Centraliza o título */
+}
+
+
+/* Links */
+.links {
+    margin: 1.25rem ;
+    font-size: 1rem;
+    display: flex;
+}
+
+/* Configuração dos conteúdos */
+/* Configuração em linha com ajuste dinâmico */
+#conteudo {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* Adiciona espaçamento interno */
+    padding-inline: 10px; /* Evita transbordamento horizontal */
+    max-width: 100%; /* Limita a largura ao tamanho da tela */
+    box-sizing: border-box; /* Inclui padding no tamanho total */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+
+/* Itens individuais */
+.lista {
+    flex: 1 1 calc(16.66% - 40px); /* Aproximadamente 6 itens por linha em Full HD */
+    max-width: 300px;
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.lista:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagens */
+.imagem {
+    width: 100%;
+    height: 15vw; /* Ajusta dinamicamente com a largura da tela */
+    max-height: 200px; /* Limita a altura máxima */
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Botão do Google Maps */
+.botaodoGoogle {
+    display: inline-block;
+    margin-top: 0.625rem;
+    padding: 0.625rem 0.9375rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+}
+
+.botaodoGoogle:hover {
+    background-color: #0056b3;
+}
+
+/* Cores para os parágrafos */
+p {
+    color: #FFB854;
+    font-size: 1rem;
+    margin: 0.3125rem 0;
+}
+
+#botao-completo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center;
+    margin: 5vh; /* Diminuído de 5vh para 2vh para reduzir o espaçamento */
+}
+
+
+.botao-com-seta {
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    color: #f4a64e;
+    cursor: pointer;
+    border: 1px solid #f4a64e;
+    border-radius: 50%;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.botao-com-seta:hover {
+    background-color: #f4a64e;
+    color: #fff;
+}
+
+#ver-tudo {
+    font-size: 1rem;
+    text-align: center;
+    color: #FFB854;
+    cursor: pointer;
+}
+
+@media (min-width: 1920px) {
+    #conteudo {
+        justify-content: space-between; /* Espaçamento entre os itens */
+    }
+    #lista {
+        flex: 1 1 calc(16.66% - 40px); /* 6 itens por linha em Full HD */
+    }
+}
+
+/* Ajustes para resoluções menores */
+@media (max-width: 1200px) {
+    #lista {
+        flex: 1 1 calc(33.33% - 40px); /* 3 itens por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    #lista {
+        flex: 1 1 calc(50% - 20px); /* 2 itens por linha */
+    }
+    #conteudo {
+        gap: 10px; /* Menor espaçamento */
+        justify-content: center; /* Centraliza os itens no container */
+    }
+}
+
+@media (max-width: 480px) {
+    #lista {
+        flex: 1 1 calc(100% - 20px); /* 1 item por linha */
+    }
+    #conteudo {
+        gap: 5px; /* Espaço ainda menor */
+        justify-content: center; /* Centraliza os itens no container */
+    }
+}

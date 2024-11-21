@@ -1,0 +1,193 @@
+.container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.listaEventScreen {
+  flex: 1 1 calc(16.66% - 40px); /* Aproximadamente 6 itens por linha em Full HD */
+  max-width: 300px;
+  padding: 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  cursor: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.search {
+  margin: 0 20px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.location {
+  color: #ff9900;
+}
+
+.imagemEventScreen {
+  cursor: auto;
+  max-width: 460px;
+  max-height: 500px;
+  width: 100%; /* Para garantir que a imagem se ajuste ao tamanho do container */
+}
+
+.edit-button {
+  border: 1px solid #ff9900;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ff9900;
+  background: none;
+  cursor: pointer;
+}
+
+.breadcrumb {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  align-content: center;
+  flex: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 40% 60%; /* 40% para a imagem, 60% para as informações */
+  gap: 20px; /* Espaçamento entre imagem e informações */
+  max-width: 1200px;
+  width: 90%;
+  margin-right: auto;
+  padding: 3rem;
+  border: 1px solid #ddd;
+  border-radius: 0.8rem;
+  background-color: #f9f9f9;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+}
+
+.info-container {
+  width: 100%; /* Informações ocupam 100% do espaço restante */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px; /* Espaçamento entre os itens na coluna */
+}
+
+p {
+  margin: 0.36rem;
+}
+
+.confirm-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid #ff9900;
+  background: none;
+  color: #ff9900;
+  cursor: pointer;
+  border-radius: 5px;
+  align-items: end;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 250px;
+  background: #001a33;
+  margin-left: auto;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr 1fr; /* Ajusta para duas colunas em telas menores */
+  }
+
+  .listaEventScreen {
+    max-width: 90%;
+    flex: 1 1 calc(33.33% - 20px); /* Aproximadamente 3 itens por linha */
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr; /* Ajusta para uma única coluna em telas menores */
+    padding: 1rem; /* Menos espaçamento nas laterais */
+  }
+
+  .listaEventScreen {
+    max-width: 100%;
+    flex: 1 1 calc(50% - 20px); /* Aproximadamente 2 itens por linha */
+    margin-bottom: 20px; /* Espaçamento entre os itens */
+  }
+
+  .imagemEventScreen {
+    max-width: 100%; /* Imagem se adapta a 100% do seu contêiner */
+    max-height: 300px; /* Limita a altura da imagem */
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens ao início */
+  }
+
+  .search {
+    width: 100%; /* A caixa de pesquisa ocupa toda a largura disponível */
+    margin: 10px 0;
+  }
+
+  .confirm-button {
+    width: 100%; /* Botão de confirmação ocupa toda a largura disponível */
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px; /* Diminui o tamanho da logo em telas muito pequenas */
+  }
+
+  .search {
+    font-size: 14px; /* Reduz o tamanho da fonte da pesquisa */
+  }
+
+  .location {
+    font-size: 18px; /* Ajuste no tamanho da localização */
+  }
+
+  .listaEventScreen {
+    flex: 1 1 calc(100% - 20px); /* Um item por linha em telas pequenas */
+    margin-bottom: 15px;
+  }
+
+  .breadcrumb {
+    padding: 10px 15px; /* Menos padding na breadcrumb */
+    font-size: 12px;
+  }
+}
